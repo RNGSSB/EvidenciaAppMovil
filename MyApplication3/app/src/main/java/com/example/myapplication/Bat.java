@@ -43,7 +43,7 @@ public class Bat {
         mScreenY = y;
 
         // 1/8 screen width wide
-        mLength = mScreenX / 4;
+        mLength = mScreenX / 8;
 
         // 1/25 screen mHeight high
         mHeight = mScreenY / 25;

@@ -7,7 +7,7 @@ public class Ball {
     private RectF mRect;
     public float mXVelocity;
     public float mYVelocity;
-    private float mBallWidth;
+    public float mBallWidth;
     private float mBallHeight;
 
     public Ball(int screenX, int screenY){

@@ -284,7 +284,7 @@ class PongView extends SurfaceView implements Runnable {
 
             // Draw the mScore
             mPaint.setTextSize(40);
-            mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives + "   Speed!: " + Math.abs(mBall.mYVelocity) + "   Record: " + maxScore, 10, 50, mPaint);
+            mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives + "   Speed!: " + Math.abs(mBall.mYVelocity) + "   Record: " + maxScore + "    m: " + mBall.mBallWidth, 10, 50, mPaint);
 
             // Draw everything to the screen
             mOurHolder.unlockCanvasAndPost(mCanvas);
