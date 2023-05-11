@@ -66,6 +66,8 @@ class PongView extends SurfaceView implements Runnable {
     // The mScore
     int mScore = 0;
 
+    int maxScore = 0;
+
     // Lives
     int mLives = 3;
 
@@ -155,6 +157,9 @@ class PongView extends SurfaceView implements Runnable {
         mBall.mXVelocity = mBall.mYVelocity;
         // if game over reset scores and mLives
         if(mLives == 0) {
+            if(mScore > maxScore){
+                maxScore = mScore;
+            }
             mScore = 0;
             mLives = 3;
         }
@@ -279,7 +284,7 @@ class PongView extends SurfaceView implements Runnable {
 
             // Draw the mScore
             mPaint.setTextSize(40);
-            mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives + "   Speed!: " + Math.abs(mBall.mYVelocity) + "   Record Speed: " + Math.abs(maxSpeed), 10, 50, mPaint);
+            mCanvas.drawText("Score: " + mScore + "   Lives: " + mLives + "   Speed!: " + Math.abs(mBall.mYVelocity) + "   Record: " + maxScore, 10, 50, mPaint);
 
             // Draw everything to the screen
             mOurHolder.unlockCanvasAndPost(mCanvas);
